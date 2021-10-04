@@ -320,7 +320,7 @@ La redirezione può essere fatta in due modi:
 
 La shell permette anche di usare il contenuto di un file come input per un programma:
 ```text
-$ mail -a "Oggetto email" marco < testo_mail.txt
+$ cat < file.txt
 ```
 
 Questo meccanismo lo usiamo spesso in sede d'esame, ricordatevelo!
