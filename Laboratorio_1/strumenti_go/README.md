@@ -26,7 +26,7 @@ Codice prima della formattazione:
 package main
 import "fmt"
 func main() {
-fmt.Prinln("Hello world!")
+fmt.Println("Hello world!")
      }
 ```
 
@@ -37,7 +37,7 @@ package main
 import "fmt"
 
 func main() {
-    fmt.Prinln("Hello world!")
+    fmt.Println("Hello world!")
 }
 ```
 
