@@ -41,7 +41,7 @@ func main() {
 	fmt.Print("Inserisci un numero: ")
 	fmt.Scan(&n)
 
-	var i int;
+	var i int
 	for i = 1; i <= n; i *= 2 {
 		fmt.Print(i, " ")
 	}
