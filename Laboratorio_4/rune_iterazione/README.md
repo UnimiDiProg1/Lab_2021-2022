@@ -86,7 +86,7 @@ import "fmt"
 func main() {
 
 	s := "ciao, come va?" 
-    /* s è interamente definita da caratteri considerati nello standard US-ASCII */
+    	/* s è interamente definita da caratteri considerati nello standard US-ASCII */
 
 	fmt.Println(string(s[0]) + string(s[len(s)-2]) + string(s[len(s)-1]))
 }
@@ -108,16 +108,18 @@ func main() {
 
 	for i := 0; i<len(s); i++ {
 		fmt.Print(string(s[i]))
-    }
-    fmt.Println()
+    	}
+
+    	fmt.Println()
 
 	s = "Ciao, come è andata?"
-    // s non è interamente definita da caratteri considerati nello standard US-ASCII
+    	// s non è interamente definita da caratteri considerati nello standard US-ASCII
 
 	for i := 0; i<len(s); i++ {
 		fmt.Print(string(s[i]))
-    }
-    fmt.Println()
+    	}
+    
+	fmt.Println()
 
 }
 ```
@@ -138,9 +140,9 @@ import "fmt"
 func main() {
 
 	s := "ciao, come va?"
-    /* s è interamente definita da caratteri considerati nello standard US-ASCII */
+    	/* s è interamente definita da caratteri considerati nello standard US-ASCII */
 
-    fmt.Println(s[6:10] + string(s[len(s)-1]))
+    	fmt.Println(s[6:10] + string(s[len(s)-1]))
 	fmt.Println(s[:5] + s[len(s)-4:])
 	
 }
