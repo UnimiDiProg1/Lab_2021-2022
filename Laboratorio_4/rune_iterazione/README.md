@@ -54,8 +54,8 @@ func main() {
 	numeroiterazione := 0
 	for i, c := range s {
 		fmt.Print("Iterazione ", numeroiterazione, ": In posizione ", i,
-			" inizia la sottosequenza di byte che codifica il carattere ",
-            string(c), "\n")
+				" inizia la sottosequenza di byte che codifica il carattere ",
+            			string(c), "\n")
 		numerocaratteri++
 		numeroiterazione++
 	}
