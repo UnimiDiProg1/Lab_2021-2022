@@ -19,25 +19,37 @@ func main() {
 	fmt.Println()
 }
 ```
-## 2 Carte
 
-Sapendo che al codice Unicode 127153 (associato alla rappresentazione in bit Unicode/UTF-8 `'\U0001F0B1'`) corrisponde il simbolo "asso di cuori", e che i codici successivi corrispondono alle carte successive (2 di cuori, 3 di cuori, ...), scrivere un programma che stampi tutte le carte da gioco dall'asso di cuori al 10 di cuori.
+# 2 Qual è l'output?
 
-*Suggerimento:* Un carattere è una variabile di tipo `rune`, il cui valore è un intero corrispondente al codice Unicode del carattere. Le istruzioni equivalenti `var c rune = 127163` e `var c rune = '\U0001F0B1'` servono a definire la varibile `c` di tipo `rune` ed inizializzarla al valore "asse di cuori". Per stampare la carta da gioco "asse di cuori" si può utilizzare l'istruzione `fmt.Print(string(c))` o `fmt.Printf("%c",c)`.
+Qual è l'output del seguente programma?
 
-```text
-$ go run carte.go 
-Simbolo: 🂱 - Codice numerico in base 10: 127153
-Simbolo: 🂲 - Codice numerico in base 10: 127154
-Simbolo: 🂳 - Codice numerico in base 10: 127155
-Simbolo: 🂴 - Codice numerico in base 10: 127156
-Simbolo: 🂵 - Codice numerico in base 10: 127157
-Simbolo: 🂶 - Codice numerico in base 10: 127158
-Simbolo: 🂷 - Codice numerico in base 10: 127159
-Simbolo: 🂸 - Codice numerico in base 10: 127160
-Simbolo: 🂹 - Codice numerico in base 10: 127161
-Simbolo: 🂺 - Codice numerico in base 10: 127162
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	s := "Papà!"
+
+	var s1 string
+	for _, carattere := range s {
+		s1 += string(carattere)
+	}
+	fmt.Println(s1)
+
+	var s2 string
+	for _, carattere := range s {
+		s2 = string(carattere) + s2
+	}
+	fmt.Println(s2)
+
+}
 ```
+
 ## 3 Qual è l'output?
 
 Analizzate l'output del seguente programma.
@@ -128,25 +140,27 @@ Osservazioni:
 * Data una stringa `s`, `s[i]` è il byte in posizione `i` nella sequenza di byte che rappresenta `s`. In generale, `s[i]` **non** codifica un carattere.
 * In generale, per esaminare in sequenza i caratteri che definiscono una stringa si deve utilizzare il costrutto `for range`.
 
-## 6 Qual è l'output?
+## 6 Carte
 
-Qual è l'output del seguente programma?
+Sapendo che al codice Unicode 127153 (associato alla rappresentazione in bit Unicode/UTF-8 `'\U0001F0B1'`) corrisponde il simbolo "asso di cuori", e che i codici successivi corrispondono alle carte successive (2 di cuori, 3 di cuori, ...), scrivere un programma che stampi tutte le carte da gioco dall'asso di cuori al 10 di cuori.
 
-```go
-package main
+*Suggerimento:* Un carattere è una variabile di tipo `rune`, il cui valore è un intero corrispondente al codice Unicode del carattere. Le istruzioni equivalenti `var c rune = 127163` e `var c rune = '\U0001F0B1'` servono a definire la varibile `c` di tipo `rune` ed inizializzarla al valore "asse di cuori". Per stampare la carta da gioco "asse di cuori" si può utilizzare l'istruzione `fmt.Print(string(c))` o `fmt.Printf("%c",c)`.
 
-import "fmt"
-
-func main() {
-
-	s := "ciao, come va?"
-    	/* s è interamente definita da caratteri considerati nello standard US-ASCII */
-
-    	fmt.Println(s[6:10] + string(s[len(s)-1]))
-	fmt.Println(s[:5] + s[len(s)-4:])
-	
-}
+```text
+$ go run carte.go 
+Simbolo: 🂱 - Codice numerico in base 10: 127153
+Simbolo: 🂲 - Codice numerico in base 10: 127154
+Simbolo: 🂳 - Codice numerico in base 10: 127155
+Simbolo: 🂴 - Codice numerico in base 10: 127156
+Simbolo: 🂵 - Codice numerico in base 10: 127157
+Simbolo: 🂶 - Codice numerico in base 10: 127158
+Simbolo: 🂷 - Codice numerico in base 10: 127159
+Simbolo: 🂸 - Codice numerico in base 10: 127160
+Simbolo: 🂹 - Codice numerico in base 10: 127161
+Simbolo: 🂺 - Codice numerico in base 10: 127162
 ```
+
+
 ## 7 Analisi lettere maiuscole/minuscole (1)
 
 Scrivere un programma che legga da **standard input** una stringa senza spazi e, considerando **solamente** l’insieme delle lettere dell'alfabeto inglese, stampi
@@ -231,27 +245,7 @@ Testo minuscolo: testo_di_prova....
 
 ```
 
-## 9 Generazione sottostringhe
-
-Scrivere un programma che:
-1. legga da **standard input** una stringa senza spazi ed interamente definita da lettere dell'alfabeto inglese;
-2. stampi iterativamente la stringa ottenuta eliminando la prima e l'ultima lettera dalla stringa corrente.
-
-##### Esempio d'esecuzione:
-
-```text
-$ go run sottostringhe.go
-Parola in input: Prova
-Sottostringa 1: Prova
-Sottostringa 2: rov
-Sottostringa 3: o
-
-$ go run sottostringhe.go
-Parola in input: Faro
-Sottostringa 1: Faro
-Sottostringa 2: ar
-```
-## 10 Spaziatura caratteri
+## 9 Spaziatura caratteri
 
 Scrivere un programma che:
 1. legga da **standard input** una stringa senza spazi ed interamente definita da lettere dell'alfabeto inglese; 
@@ -264,7 +258,7 @@ $ go run spazia.go
 Inserisci una stringa di testo: CiaoMondo!
 C i a o M o n d o !
 ``` 
-## 11 Analisi lettere maiuscole/minuscole (2)
+## 10 Analisi lettere maiuscole/minuscole (2)
 
 Scrivere un programma che legga da **standard input** una stringa senza spazi e, considerando l’insieme delle lettere dell'alfabeto inglese, stampi
 * il numero di vocali maiuscole;
@@ -301,33 +295,7 @@ Vocali minuscole: 2
 Consonanti minuscole: 0
 ```
 
-## 12 Rombo
-
-Scrivere un programma che legga da **standard input** un numero intero `n` e, come mostrato nell'**Esempio di esecuzione**, stampi a video un rombo con diagonale maggiore e diagonale minore di lunghezza `2*n+1` utilizzando il carattere `*` (asterisco).
-
-A tal fine definire due stringhe: 'stringaSpazi' e 'stringaAsterischi' contenenti il massimo numero dei caratteri necessari e utilizzare le loro sottostringhe per la stampa.
-
-Se `n` è negativo o nullo, anziché stampare il rombo il programma deve stampare un messaggio d'errore.
-
-##### Esempio d'esecuzione:
-
-```text
-$ go run rombo.go
-3
-   *
-  ***
- *****
-*******
- *****
-  ***
-   *
-
-$ go run rombo.go 
-0
-Dimensione non sufficiente
-``` 
-
-## 13 Stringa alternata
+## 11 Stringa alternata
 
 Scrivere un programma che legga da **standard input** due stringhe senza spazi `s1` e `s2` e stampi a video la stringa creata alternando i caratteri delle stringhe `s1` e `s2`.
 
@@ -359,7 +327,7 @@ go
 egsoa-m-e-
 ```
 
-## 14 Parola palindroma
+## 12 Parola palindroma
 
 **Definizione**: Una parola è palindroma se può essere letta normalmente, da sinistra verso destra, sia viceversa, cioè da destra verso sinistra.
 
