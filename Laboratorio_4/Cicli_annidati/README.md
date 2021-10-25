@@ -1,4 +1,4 @@
-# Laboratorio 3 - Cicli annidati
+# Laboratorio 4 - Cicli annidati
 ## 1 Qual è l'output?
 
 Quanti asterischi stampa il seguente programma?

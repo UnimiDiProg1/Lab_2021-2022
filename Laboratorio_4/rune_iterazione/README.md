@@ -1,4 +1,4 @@
-# Laboratorio 6 - Rune iterazione
+# Laboratorio 4 - Rune iterazione
 ## 1 Qual è l'output?
 
 Qual è l'output del seguente programma?
