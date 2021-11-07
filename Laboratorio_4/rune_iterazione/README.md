@@ -18,7 +18,7 @@ func main() {
 	fmt.Println()
 }
 ```
-# 2 Qual è l'output?
+# Qual è l'output?
 
 Qual è l'output del seguente programma?
 
