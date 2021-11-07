@@ -1,5 +1,4 @@
-# Laboratorio 4 - Rune iterazione
-## 1 Qual è l'output?
+# Qual è l'output?
 
 Qual è l'output del seguente programma?
 
@@ -19,7 +18,6 @@ func main() {
 	fmt.Println()
 }
 ```
-
 # 2 Qual è l'output?
 
 Qual è l'output del seguente programma?
@@ -49,8 +47,7 @@ func main() {
 
 }
 ```
-
-## 3 Qual è l'output?
+# Qual è l'output?
 
 Analizzate l'output del seguente programma.
 
@@ -66,8 +63,8 @@ func main() {
 	numeroiterazione := 0
 	for i, c := range s {
 		fmt.Print("Iterazione ", numeroiterazione, ": In posizione ", i,
-				" inizia la sottosequenza di byte che codifica il carattere ",
-            			string(c), "\n")
+			" inizia la sottosequenza di byte che codifica il carattere ",
+            string(c), "\n")
 		numerocaratteri++
 		numeroiterazione++
 	}
@@ -85,8 +82,7 @@ In generale, una stringa è una sequenza di byte. Nelle esercitazioni di laborat
 * Per lunghezza di una stringa `s` si intende il numero di byte utilizzati per rappresentare `s` (`len(s)`).
 
 Ad ogni iterazione del ciclo definito dal costrutto `for range`, `i` (variabile di tipo `int`) indica la posizione in cui inizia la sottosequenza di byte che rappresenta il carattere `string(c)`. `c` è una variabile di tipo `rune`, il cui valore è un intero corrispondente al codice Unicode del carattere.
-
-## 4 Qual è l'output?
+# Qual è l'output?
 
 Qual è l'output del seguente programma?
 
@@ -98,13 +94,13 @@ import "fmt"
 func main() {
 
 	s := "ciao, come va?" 
-    	/* s è interamente definita da caratteri considerati nello standard US-ASCII */
+    /* s è interamente definita da caratteri considerati nello standard US-ASCII */
 
 	fmt.Println(string(s[0]) + string(s[len(s)-2]) + string(s[len(s)-1]))
 }
 
 ```
-## 5 Qual è l'output?
+# Qual è l'output?
 
 Qual è l'output del seguente programma?
 
@@ -120,18 +116,16 @@ func main() {
 
 	for i := 0; i<len(s); i++ {
 		fmt.Print(string(s[i]))
-    	}
-
-    	fmt.Println()
+    }
+    fmt.Println()
 
 	s = "Ciao, come è andata?"
-    	// s non è interamente definita da caratteri considerati nello standard US-ASCII
+    // s non è interamente definita da caratteri considerati nello standard US-ASCII
 
 	for i := 0; i<len(s); i++ {
 		fmt.Print(string(s[i]))
-    	}
-    
-	fmt.Println()
+    }
+    fmt.Println()
 
 }
 ```
@@ -139,8 +133,7 @@ func main() {
 Osservazioni:
 * Data una stringa `s`, `s[i]` è il byte in posizione `i` nella sequenza di byte che rappresenta `s`. In generale, `s[i]` **non** codifica un carattere.
 * In generale, per esaminare in sequenza i caratteri che definiscono una stringa si deve utilizzare il costrutto `for range`.
-
-## 6 Carte
+# Carte
 
 Sapendo che al codice Unicode 127153 (associato alla rappresentazione in bit Unicode/UTF-8 `'\U0001F0B1'`) corrisponde il simbolo "asso di cuori", e che i codici successivi corrispondono alle carte successive (2 di cuori, 3 di cuori, ...), scrivere un programma che stampi tutte le carte da gioco dall'asso di cuori al 10 di cuori.
 
@@ -159,9 +152,7 @@ Simbolo: 🂸 - Codice numerico in base 10: 127160
 Simbolo: 🂹 - Codice numerico in base 10: 127161
 Simbolo: 🂺 - Codice numerico in base 10: 127162
 ```
-
-
-## 7 Analisi lettere maiuscole/minuscole (1)
+# Analisi lettere maiuscole/minuscole (1)
 
 Scrivere un programma che legga da **standard input** una stringa senza spazi e, considerando **solamente** l’insieme delle lettere dell'alfabeto inglese, stampi
 * il numero di lettere maiuscole;
@@ -212,8 +203,7 @@ Minuscole: 2
 Vocali: 4
 Consonanti: 0
 ```
-
-## 8 Trasformazione lettere maiuscole/minuscole
+# Trasformazione lettere maiuscole/minuscole
 
 Scrivere un programma che legga da **standard input** una stringa e, considerando l’insieme delle lettere dell'alfabeto inglese, ristampi a video la stringa due volte: la prima volta in maiuscolo e la seconda volta in minuscolo.
 
@@ -244,8 +234,7 @@ Testo maiuscolo: TESTO_DI_PROVA....
 Testo minuscolo: testo_di_prova....
 
 ```
-
-## 9 Spaziatura caratteri
+# Spaziatura caratteri
 
 Scrivere un programma che:
 1. legga da **standard input** una stringa senza spazi ed interamente definita da lettere dell'alfabeto inglese; 
@@ -258,7 +247,7 @@ $ go run spazia.go
 Inserisci una stringa di testo: CiaoMondo!
 C i a o M o n d o !
 ``` 
-## 10 Analisi lettere maiuscole/minuscole (2)
+# Analisi lettere maiuscole/minuscole (2)
 
 Scrivere un programma che legga da **standard input** una stringa senza spazi e, considerando l’insieme delle lettere dell'alfabeto inglese, stampi
 * il numero di vocali maiuscole;
@@ -267,8 +256,6 @@ Scrivere un programma che legga da **standard input** una stringa senza spazi e,
 * il numero di consonanti minuscole.
 
 A tal fine definire le seguenti funzioni: 'èLetteraValida(l rune) bool', 'èMaiuscola(l rune) bool', 'èVocale(l rune) bool'.
-
-Alternativamente, è possibile anche utilizzare le funzioni 'unicode.IsLetter' e 'unicode.IsUpper' del package 'unicode' al posto di 'èLetteraValida' e 'èMaiuscola' rispettivamente. Che differenze ci sono?
 
 ##### Esempio d'esecuzione:
 
@@ -294,8 +281,7 @@ Consonanti maiuscole: 0
 Vocali minuscole: 2
 Consonanti minuscole: 0
 ```
-
-## 11 Stringa alternata
+# Stringa alternata
 
 Scrivere un programma che legga da **standard input** due stringhe senza spazi `s1` e `s2` e stampi a video la stringa creata alternando i caratteri delle stringhe `s1` e `s2`.
 
@@ -326,8 +312,7 @@ esame
 go
 egsoa-m-e-
 ```
-
-## 12 Parola palindroma
+# Parola palindroma
 
 **Definizione**: Una parola è palindroma se può essere letta normalmente, da sinistra verso destra, sia viceversa, cioè da destra verso sinistra.
 
