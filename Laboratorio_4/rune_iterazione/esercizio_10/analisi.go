@@ -21,12 +21,11 @@ func èMaiuscola(l rune) bool {
 }
 
 func èVocale(l rune) bool {
-	switch l {
-	case 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U':
+	if l == 'a' || l == 'e' || l == 'i' || l == 'o' || l == 'u' || l == 'A' || l == 'E' || l == 'I' || l == 'O' || l == 'U' {
 		return true
-	default:
-		return false
 	}
+	
+	return false
 }
 
 func main() {
@@ -54,10 +53,9 @@ func main() {
 					cminuscole++
 				}
 			}
-
 		}
-
 	}
+
 	fmt.Println("Vocali maiuscole:", vmaiuscole)
 	fmt.Println("Consonanti maiuscole:", cmaiuscole)
 	fmt.Println("Vocali minuscole:", vminuscole)

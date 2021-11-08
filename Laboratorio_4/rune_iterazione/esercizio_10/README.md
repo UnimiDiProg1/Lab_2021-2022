@@ -8,8 +8,6 @@ Scrivere un programma che legga da **standard input** una stringa senza spazi e,
 
 A tal fine definire le seguenti funzioni: 'èLetteraValida(l rune) bool', 'èMaiuscola(l rune) bool', 'èVocale(l rune) bool'.
 
-Alternativamente, è possibile anche utilizzare le funzioni 'unicode.IsLetter' e 'unicode.IsUpper' del package 'unicode' al posto di 'èLetteraValida' e 'èMaiuscola' rispettivamente. Che differenze ci sono?
-
 ##### Esempio d'esecuzione:
 
 ```text
