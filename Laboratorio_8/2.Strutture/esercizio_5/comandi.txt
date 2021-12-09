@@ -1,0 +1,9 @@
+I;Mario;Rossi;Via Celoria;18;20122;Milano;02503111
+I;Mario;Rossi;Via Celoria;18;20122;Milano;
+S
+I;Elena;Bianchi;Via Celoria;18;20122;Milano;02503111
+S
+E;Mario;Rossi
+S
+A;Elena;Bianchi;Via Festa del perdono;7;20122;Milano;02503111
+S
