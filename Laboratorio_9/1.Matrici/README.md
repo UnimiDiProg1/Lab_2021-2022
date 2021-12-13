@@ -178,20 +178,25 @@ $ go run tavola_pitagorica.go 10
 
 Scrivere un programma che:
 * legga da **riga di comando** un numero intero `n`;
-* utilizzi le funzioni `CreaSliceBidimensionale(l int) [][]int` e `InizializzaSliceBidimensionale([][]int) ` descritte nell'Esercizio 2 (Laboratorio 9 - Array e slice III) per inizializzare una variabile `s` di tipo `[][]int` con lunghezza/capacità pari a `n` in cui ogni elemento `s[i]`, con `0 <= i < l`, è un valore di tipo `[]int` con lunghezza/capacità pari a `n`;
-* stampi a video tutte le coppie di indici `(i, j)`, con `0 <= i < l` e `0 <= j < l`, tali che `s[i][j]` è uguale a `1`.
+* utilizzi le funzioni `CreaSliceBidimensionale(l int) [][]int` e `AssegnaSliceBidimensionale(s [][]int) ` descritte nell'Esercizio 4 per inizializzare una variabile `s` di tipo `[][]int` con lunghezza/capacità pari a `n` in cui ogni elemento `s[i]` è un valore di tipo `[]int` con lunghezza/capacità pari a `n`;
+* stampi a video tutte le coppie di indici `(i, j)`, tali che `s[i][j]` è uguale a `1`.
 
-Oltre alle funzioni `main()`, `CreaSliceBidimensionale()`, e `InizializzaSliceBidimensionale()` devono essere definite ed utilizzate almeno le seguenti funzioni:
-* una funzione `Coppie(s [][]int) (coppie [][]int)` che riceve in input un valore `[][]int` nel parametro `s` e restituisce il valore di tipo `[][]int` nella variabile `coppie` in cui sono memorizzate tutte le coppie di indici `(i, j)`, con `0 <= i < l` e `0 <= j < l`, tali che `s[i][j]` è uguale a `1` (`coppie[k]`, con `0 <= k < len(coppie)`, è un valore di tipo` []int` di lunghezza `2`).
+Oltre alle funzioni `main()`, `CreaSliceBidimensionale()`, e `AssegnaSliceBidimensionale()` devono essere definite ed utilizzate almeno le seguenti funzioni:
+* una funzione `Coppie(s [][]int) (coppie [][]int)` che riceve in input un valore `[][]int` nel parametro `s` e restituisce il valore di tipo `[][]int` nella variabile `coppie` in cui sono memorizzate tutte le coppie di indici `(i, j)`, tali che `s[i][j]` è uguale a `1`.
 
 ##### Esempio d'esecuzione:
 
 ```text
-$ go run coppie.go 4
+$ go run coppie.go 3
+la slice originale è:
+        0       1       1
+        1       1       0
+        1       1       0
+gli indirizzi degli elementi uguali a 1 sono:
+[0 1]
+[0 2]
+[1 0]
 [1 1]
-[1 3]
+[2 0]
 [2 1]
-[2 2]
-[3 2]
-[3 3]
 ```
