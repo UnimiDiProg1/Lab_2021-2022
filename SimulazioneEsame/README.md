@@ -63,7 +63,6 @@ $ go test
         esercizio_filtro_test.go:40: 
                 ...
 ```
-\newpage
 
 
 # Esercizio 1
@@ -102,10 +101,9 @@ La soluzione 2.396 è maggiore della soglia
 $ go run esercizio_1.go 1x^2+10x+25=0 -6 1
 Esiste un’unica soluzione reale: -5.000
 
-$ go run esercizio_1.go 5x^2+1x+2=0
+$ go run esercizio_1.go 5x^2+1x+2=0 -1 0.01
 Non ci sono soluzioni reali
 ```
-\newpage
 
 # Esercizio 2
 
@@ -168,7 +166,6 @@ $ go run esercizio_2.go
 ABCD
 
 ```
-\newpage
 
 
 # Esercizio 3
