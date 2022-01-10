@@ -1,0 +1,1 @@
+sequenza_ordinata_A.txt;sequenza_ordinata_B.txt;sequenza_ordinata_C.txt;sequenza_ordinata_D.txt;sequenza_ordinata_E.txt;sequenza_ordinata_F.txt
